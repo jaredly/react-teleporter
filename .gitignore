@@ -1,2 +1,5 @@
 *.swp
 
+/node_modules
+/build
+*.swo
