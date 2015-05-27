@@ -3,6 +3,8 @@
 Teleport components around the tree without losing state or destroying the
 DOM!
 
+[some context/discussion in this gist](https://gist.github.com/chenglou/34b155691a6f58091953)
+
 ```javascript
 import {teleportable, teleparent} from 'react-teleport'
 ```
