@@ -4,7 +4,7 @@ import {teleportable, teleparent} from './'
 
 const PT = React.PropTypes
 
-@teleportable
+@teleportable /***\ <---- \***/
 class Image extends React.Component {
   constructor(props) {
     super(props)
@@ -26,7 +26,7 @@ class Image extends React.Component {
   }
 }
 
-@teleparent
+@teleparent /***\ <---- \***/
 class ImageParent extends React.Component {
   constructor(props) {
     super(props)
@@ -41,7 +41,7 @@ class ImageParent extends React.Component {
   getChildContext() {
     return {
       popImage: id => this.setState({popping: id}),
-      popKey: id => this.props.getTelekey(id),
+      popKey: id => this.props.getTelekey(id), /***\ <---- \***/
     }
   }
 
@@ -54,7 +54,8 @@ class ImageParent extends React.Component {
       return <div style={style}>
         <Image
           id={this.state.popping}
-          telekey={this.props.getTelekey(this.state.popping)}/>
+          telekey={this.props.getTelekey(this.state.popping)} /***\ <---- \***/
+          />
         <button onClick={() => this.setState({popping: null})}>
           Unpop
         </button>
@@ -77,7 +78,7 @@ class ImageList extends React.Component {
   render() {
     return <ul style={{listStyle: 'none', padding: 0}}>
       {imageIds.map(id => <li style={{margin: '20px 0'}} key={id}>
-        <Image telekey={this.context.popKey(id)}
+        <Image telekey={this.context.popKey(id)} /***\ <---- \***/
           id={id}/>
         <button onClick={() => this.context.popImage(id)}>Pop this image</button>
       </li>)}

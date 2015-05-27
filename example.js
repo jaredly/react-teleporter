@@ -6,7 +6,7 @@ import {teleportable, teleparent} from './'
 const ten = []
 for (let i=0; i<10; i++) ten.push(i)
 
-@teleportable
+@teleportable /***\ <---- \***/
 class AwesomeItem extends React.Component {
   constructor(props) {
     super(props)
@@ -38,14 +38,14 @@ function rnd(max) {
   return parseInt(Math.random() * max)
 }
 
-@teleparent
+@teleparent /***\ <---- \***/
 class Something extends React.Component {
   constructor(props) {
     super(props)
     this.state = {sel: [0, 0]}
   }
   componentWillMount() {
-    this._telekey = this.props.makeTelekey()
+    this._telekey = this.props.makeTelekey() /***\ <---- \***/
   }
   rnd() {
     this.setState({
@@ -68,7 +68,7 @@ class Something extends React.Component {
         border: '1px solid white'}}>
         {a === sel[0] && b === sel[1] ? <AwesomeItem
           key="something"
-          telekey={this._telekey}
+          telekey={this._telekey} /***\ <---- \***/
           initialText={a + ':' + b} /> : null}
       </div>)}</div>)}
     </div>
