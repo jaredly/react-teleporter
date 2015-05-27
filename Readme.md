@@ -11,7 +11,7 @@ import {teleportable, teleparent} from 'react-teleport'
 
 ### [Basic Grid](docs/grid.mov)
 
-[read the source](./example.js)
+[read the source](./example.js), interesing lines identified with `/***\ <---- \***/`
 
 (click image for .mov)
 
@@ -19,7 +19,7 @@ import {teleportable, teleparent} from 'react-teleport'
 
 ### [Photo list](docs/photojump.mov)
 
-[read the source](./photojump.js)
+[read the source](./photojump.js), interesing lines identified with `/***\ <---- \***/`
 
 (click image for .mov)
 
