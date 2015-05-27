@@ -11,13 +11,17 @@ import {teleportable, teleparent} from 'react-teleport'
 
 ### [Basic Grid](docs/grid.mov)
 
-(click for .mov)
+[read the source](./example.js)
+
+(click image for .mov)
 
 [![grid](docs/grid.gif)](docs/grid.mov)
 
 ### [Photo list](docs/photojump.mov)
 
-(click for .mov)
+[read the source](./photojump.js)
+
+(click image for .mov)
 
 [![image](docs/photojump.gif)](docs/photojump.mov)
 
