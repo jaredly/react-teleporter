@@ -13,7 +13,7 @@ import {teleportable, teleparent} from 'react-teleport'
 
 (click for .mov)
 
-[![grid](docs/grid.png)](docs/grid.mov)
+[![grid](docs/grid.gif)](docs/grid.mov)
 
 ### [Photo list](docs/photojump.mov)
 
