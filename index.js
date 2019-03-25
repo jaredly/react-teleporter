@@ -87,6 +87,8 @@ const teleparent = Wrapped => class Teleparent extends React.Component {
     super(props)
     this.keys = []
     this.namedKeys = {}
+    this._makeKey = this._makeKey.bind(this);
+    this.getKey = this.getKey.bind(this);
   }
   componentWillUnMount() {
     this.keys.forEach(key => {
@@ -115,8 +117,8 @@ const teleparent = Wrapped => class Teleparent extends React.Component {
   }
   render() {
     return <Wrapped
-      getTelekey={this.getKey.bind(this)}
-      makeTelekey={this._makeKey.bind(this)}
+      getTelekey={this.getKey}
+      makeTelekey={this._makeKey}
       {...this.props}/>
   }
 }
