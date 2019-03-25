@@ -158,7 +158,7 @@ const teleregistry = {
 }
 
 function newKey() {
-  return Math.random().toString(0x0f).slice(10, 20)
+  return Math.random().toString(36).slice(2)
 }
 
 
